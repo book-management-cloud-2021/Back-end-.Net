@@ -48,8 +48,8 @@ namespace BookManagement.Controllers
             {
                 _context.Languages.Add(new Language
                 {
-                    LanguageName = Guid.NewGuid(),
-                    LanguageId = languageName,
+                    LanguageId = Guid.NewGuid(),
+                    LanguageName = languageName,
                     IsActived = true
                 });
 

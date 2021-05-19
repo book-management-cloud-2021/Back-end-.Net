@@ -15,9 +15,6 @@ namespace BookManagement.Entities
         public string ManagerUsername { get; set; }
         public string Password { get; set; }
         public string Fullname { get; set; }
-        public DateTime? Dob { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
 
         public virtual ICollection<History> Histories { get; set; }
     }
