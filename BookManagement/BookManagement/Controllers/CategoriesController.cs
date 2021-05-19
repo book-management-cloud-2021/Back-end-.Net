@@ -28,7 +28,7 @@ namespace BookManagement.Controllers
                 .Select(c => new CategoryViewModel
                 {
                     CategoryId = c.CategoryId,
-                    CategoryName = c.CategoryName,
+                    CategoryName = c.CategoryName
                 }).ToList();
 
             if (categoriess.Any())
@@ -68,7 +68,7 @@ namespace BookManagement.Controllers
 
                 _context.SaveChanges();
             }
-            return Ok("Created a new categories successfully !");
+            return Ok("Created a new category successfully !");
         }
     }
 }
