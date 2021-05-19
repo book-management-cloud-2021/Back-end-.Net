@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace BookManagement.Models
+namespace BookManagement.Entities
 {
     public partial class History
     {

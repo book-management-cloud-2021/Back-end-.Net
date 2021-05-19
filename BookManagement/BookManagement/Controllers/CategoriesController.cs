@@ -1,4 +1,4 @@
-﻿using BookManagement.Models;
+﻿using BookManagement.Entities;
 using BookManagement.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +18,7 @@ namespace BookManagement.Controllers
         {
             _context = context;
         }
-/*
+
         [HttpGet]
         [Route("api/Categories/SearchCategories")]
         public ActionResult SearchCategories()
@@ -35,7 +35,7 @@ namespace BookManagement.Controllers
                 return Ok(categoriess);
 
             return NotFound("No have any categoriess!");
-        }*/
+        }
 
         [HttpPost]
         [Route("api/Categories/CreateCategory")]
