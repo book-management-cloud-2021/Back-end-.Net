@@ -20,7 +20,7 @@ namespace BookManagement.Controllers
         }
 
         [HttpGet]
-        [Route("api/Languages/SearchLanguages")]
+        [Route("api/languages/search-languages")]
         public ActionResult SearchLanguages()
         {
             var languages = _context.Languages
@@ -38,7 +38,7 @@ namespace BookManagement.Controllers
         }
 
         [HttpPost]
-        [Route("api/Languages/CreateLanguage")]
+        [Route("api/languages/create-language")]
         public ActionResult CreateLanguage(string languageName)
         {
             var existedLanguage = _context.Languages

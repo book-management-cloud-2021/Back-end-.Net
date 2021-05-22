@@ -20,7 +20,7 @@ namespace BookManagement.Controllers
         }
 
         [HttpGet]
-        [Route("api/Categories/SearchCategories")]
+        [Route("api/categories/search-categories")]
         public ActionResult SearchCategories()
         {
             var categoriess = _context.Categories
@@ -38,7 +38,7 @@ namespace BookManagement.Controllers
         }
 
         [HttpPost]
-        [Route("api/Categories/CreateCategory")]
+        [Route("api/categories/create-category")]
         public ActionResult CreateCategory(string categoryName)
         {
             var existedCategory = _context.Categories

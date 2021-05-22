@@ -20,7 +20,7 @@ namespace BookManagement.Controllers
         }
 
         [HttpPost]
-        [Route("api/Login")]
+        [Route("api/login")]
         public ActionResult Login(LoginViewModel model)
         {
             var result = _context.Managers
