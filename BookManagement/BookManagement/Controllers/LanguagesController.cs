@@ -38,11 +38,11 @@ namespace BookManagement.Controllers
         }
 
         [HttpPost]
-        [Route("api/languages/create-language")]
-        public ActionResult CreateLanguage(string languageName)
+        [Route("api/languages/add-or-update-language")]
+        public ActionResult AddOrUpdateLanguage(string languageName)
         {
             var existedLanguage = _context.Languages
-                .Where(o => o.LanguageName.ToLower().Equals(languageName.ToLower()));
+                .Where(l => l.LanguageName.ToLower().Equals(languageName.ToLower())); ;
 
             if (!existedLanguage.Any())
             {
@@ -57,10 +57,10 @@ namespace BookManagement.Controllers
             }
             else
             {
-                var language = existedLanguage.Select(c => new Language
+                var language = existedLanguage.Select(l => new Language
                 {
-                    LanguageId = c.LanguageId,
-                    LanguageName = c.LanguageName,
+                    LanguageId = l.LanguageId,
+                    LanguageName = l.LanguageName,
                     IsActived = true
                 }).FirstOrDefault();
 

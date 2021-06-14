@@ -38,11 +38,11 @@ namespace BookManagement.Controllers
         }
 
         [HttpPost]
-        [Route("api/categories/create-category")]
-        public ActionResult CreateCategory(string categoryName)
+        [Route("api/categories/add-or-update-category")]
+        public ActionResult AddOrUpdateCategory(string categoryName)
         {
             var existedCategory = _context.Categories
-                .Where(o => o.CategoryName.ToLower().Equals(categoryName.ToLower()));
+                .Where(c => c.CategoryName.ToLower().Equals(categoryName.ToLower()));
 
             if (!existedCategory.Any())
             {
